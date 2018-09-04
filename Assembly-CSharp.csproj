@@ -66,6 +66,9 @@
     <Compile Include="Assets\Player\PlayerMove.cs" />
     <Compile Include="Assets\Player\Skills\PlayerSkill.cs" />
     <Compile Include="Assets\Util\EnumElementType.cs" />
+    <Reference Include="UnityEditor.StandardEvents">
+      <HintPath>C:/Users/Gui/Desktop/git/meu/Unity-RpgIsometricoRolagemFixa/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Gui/Desktop/git/meu/Unity-RpgIsometricoRolagemFixa/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -74,9 +77,6 @@
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>C:/Users/Gui/Desktop/git/meu/Unity-RpgIsometricoRolagemFixa/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/Gui/Desktop/git/meu/Unity-RpgIsometricoRolagemFixa/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

@@ -11,8 +11,9 @@ namespace Assets
         public Text Level;
         public Text Life;
         public Text Mana;
+        public Text skillPoints;
         // Use this for initialization
-        void Start ()
+        void Awake()
         {
             PlayerMove.OnUpdate += _UpdateDisplay;
         }
@@ -25,6 +26,7 @@ namespace Assets
         void _UpdateDisplay(PlayerModel playerScript)
         {
             AttrPoints.text = "Pontos de atributos: " + playerScript.AttributePoints;
+            skillPoints.text = "Pontos de skill: " + playerScript.SkillPoints;
             Experience.text = "XP: " + playerScript.CurrentExperience + "/" + playerScript.NextExperience;
             Level.text = "LVL: " + playerScript.Level;
             Life.text = "Life: " + playerScript.Attributes.CurrentLife + "/" + playerScript.Attributes.TotalLife;

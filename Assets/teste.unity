@@ -292,7 +292,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 109.95001, y: 69.4}
+  m_AnchoredPosition: {x: 109.95001, y: 90}
   m_SizeDelta: {x: 183.08, y: 23.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &899534504
@@ -367,7 +367,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 109.95, y: 21.548111}
+  m_AnchoredPosition: {x: 109.95001, y: 42.14811}
   m_SizeDelta: {x: 183.08, y: 23.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &958743707
@@ -442,7 +442,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 109.95001, y: 45.9}
+  m_AnchoredPosition: {x: 109.95001, y: 66.5}
   m_SizeDelta: {x: 183.08, y: 23.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1049244815
@@ -517,7 +517,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 109.95001, y: 93}
+  m_AnchoredPosition: {x: 109.95001, y: 113.6}
   m_SizeDelta: {x: 183.08, y: 23.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1432376285
@@ -593,6 +593,7 @@ MonoBehaviour:
   Level: {fileID: 2049883470}
   Life: {fileID: 1432376285}
   Mana: {fileID: 899534504}
+  skillPoints: {fileID: 1992325867}
 --- !u!4 &1684993369
 Transform:
   m_ObjectHideFlags: 0
@@ -604,7 +605,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1737488568
 GameObject:
@@ -696,6 +697,7 @@ RectTransform:
   - {fileID: 899534503}
   - {fileID: 1432376284}
   - {fileID: 2049883469}
+  - {fileID: 1992325866}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -741,7 +743,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4845348402240592, guid: 32e96466f7a1a13488a237bebb4e9e10, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4845348402240592, guid: 32e96466f7a1a13488a237bebb4e9e10, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -755,6 +757,81 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1821277172862120, guid: 32e96466f7a1a13488a237bebb4e9e10,
     type: 2}
   m_PrefabInternal: {fileID: 1982539800}
+--- !u!1 &1992325865
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1992325866}
+  - component: {fileID: 1992325868}
+  - component: {fileID: 1992325867}
+  m_Layer: 5
+  m_Name: SkillPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1992325866
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1992325865}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1737488572}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 109.95001, y: 17.9}
+  m_SizeDelta: {x: 183.08, y: 23.89}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1992325867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1992325865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Pontos de skill: 0'
+--- !u!222 &1992325868
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1992325865}
+  m_CullTransparentMesh: 0
 --- !u!1 &2049883468
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,7 +864,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 109.95001, y: 115.9}
+  m_AnchoredPosition: {x: 109.95001, y: 136.5}
   m_SizeDelta: {x: 183.08, y: 23.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2049883470

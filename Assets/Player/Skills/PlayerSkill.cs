@@ -13,8 +13,8 @@ namespace Assets.Player.Skills
         public float CalculatorNumber;
         public float Duration;
         public float Speed;
-        public float ManaCost;
-        public float LifeCost;
+        public int ManaCost;
+        public int LifeCost;
         public float Interval;
 
         public GameObject Player;

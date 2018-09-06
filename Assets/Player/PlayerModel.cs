@@ -1,7 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using Assets.Player.Skills;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Assets.Player
 {
@@ -31,6 +34,7 @@ namespace Assets.Player
         }
 
         //controls
+        private float LastRestoreMana { get; set; } = 0f;
         private float _TimeCurrentSkill { get; set; }
         private GameObject _Player { get; set; }
 
@@ -106,6 +110,18 @@ namespace Assets.Player
                 _TimeCurrentSkill = Time.time + Attributes.SkillSpeed;
                 Object.Instantiate(skill, _Player.transform.position, _Player.transform.rotation);
             }
+        }
+
+        public bool RestoreManaForSecond()
+        {
+            if (Attributes.CurrentMana >= Attributes.TotalMana) return false;
+            if (LastRestoreMana <= 0 || Time.time > LastRestoreMana)
+            {
+                Attributes.CurrentMana += 1;
+                LastRestoreMana = Time.time + 1f;
+                return true;
+            }
+            return false;
         }
     }
 }

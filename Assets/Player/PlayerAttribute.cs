@@ -26,13 +26,13 @@
 
         //calculated
         private readonly float _s, _d, _i;
-        public float TotalLife { get; set; }
-        public float TotalMana { get; set; }
+        public int TotalLife { get; set; }
+        public int TotalMana { get; set; }
         public float MovementSpeed { get; set; }
         public float SkillSpeed { get; set; }
         //
-        public float CurrentLife { get; set; }
-        public float CurrentMana { get; set; }
+        public int CurrentLife { get; set; }
+        public int CurrentMana { get; set; }
 
         public void Add(int strength, int dexterity, int intelligence)
         {
@@ -46,14 +46,14 @@
         {
             MovementSpeed = Dexterity * _d;
             SkillSpeed = SkillSpeed > 0.01f ? SkillSpeed - _d : 0.01f; 
-            TotalLife = Strength * _s;
-            TotalMana = Intelligence * _i;
+            TotalLife = (int)(Strength * _s);
+            TotalMana = (int)(Intelligence * _i);
             if (!updateLevel) return;
             CurrentLife = TotalLife;
             CurrentMana = TotalMana;
         }
 
-        public bool UseManaLife(float mana, float life)
+        public bool UseManaLife(int mana, int life)
         {
             if (CurrentMana < mana || CurrentLife < life)
                 return false;

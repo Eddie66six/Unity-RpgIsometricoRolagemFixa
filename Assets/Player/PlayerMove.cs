@@ -1,4 +1,5 @@
-﻿using Assets.Player.Skills;
+﻿using System.Collections;
+using Assets.Player.Skills;
 using UnityEngine;
 
 namespace Assets.Player
@@ -41,16 +42,19 @@ namespace Assets.Player
                 _player.AddAttributes(0, 0, 1);
                 UpdateStatus();
             }
+
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 _player.AddAttributes(0, 1, 0);
                 UpdateStatus();
             }
+
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 _player.AddAttributes(1, 0, 0);
                 UpdateStatus();
             }
+
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 var skills = GetAllSkills();
@@ -58,6 +62,9 @@ namespace Assets.Player
                 _player.UseSkill(skills[0].GetComponent<PlayerSkill>().IdSkill);
                 UpdateStatus();
             }
+
+            if(_player.RestoreManaForSecond())
+                UpdateStatus();
         }
 
         void UpdateStatus()
